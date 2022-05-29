@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "516821060556",
+    "project_id": "pamperme-5f9ee",
+    "storage_bucket": "pamperme-5f9ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516821060556:android:6d83c4daf56ad8dfe92b69",
+        "android_client_info": {
+          "package_name": "com.Quad4M.PamperMe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516821060556-u4srokmhs0daj4818ll3t41t3551bqjo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDixF4qvX4RU62G78tCkR34iqjq0DGgAwE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516821060556-u4srokmhs0daj4818ll3t41t3551bqjo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
