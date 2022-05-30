@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pamper_me/AccessSpecifierScreen.dart';
+import 'icons/my_flutter_app_icons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,11 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Image(
-              image: AssetImage('assets/logo.jpg')
-          ),
-        ),
+        child: AccessSpecifierScreen()/*Center(
+          child: Icon(MyFlutterApp.logo,
+          size:200,
+          color: Color.fromRGBO(50, 75, 79, 1.0),)
+        ),*/
       ),
 
     );
