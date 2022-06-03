@@ -17,7 +17,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         child: Column(
           children: [
             Center(
-              child: Icon(LogoIcon.group_4),
+              child: Icon(LogoIcon.group_4,size: 50,color: Color.fromRGBO(50, 75, 79, 1.0)),
             )
           ],
         ),
