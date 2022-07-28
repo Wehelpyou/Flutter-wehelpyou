@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'icons/logo_icon_icons.dart';
+//import 'icons/logo_icon_icons.dart';
 
 
 class RegistrationScreen extends StatefulWidget {
@@ -13,15 +13,25 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      backgroundColor: Colors.indigo[50],
+      body:Container( decoration: BoxDecoration(
+        image:DecorationImage(
+          image: AssetImage("assets/login.png"),
+          fit:BoxFit.cover,
+        ),
+      ),
+
+      child: SafeArea(
         child: Column(
           children: [
             Center(
-              child: Icon(LogoIcon.group_4,size: 50,color: Color.fromRGBO(50, 75, 79, 1.0)),
+             // child: Icon(LogoIcon.group_4,size: 50,color: Color.fromRGBO(50, 75, 79, 1.0)),
+
             )
           ],
         ),
 
+      ),
       ),
     );
   }
