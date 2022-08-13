@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 class complete_reg extends StatefulWidget {
-  const complete_reg({Key? key}) : super(key: key);
+  final List _gender = ['',
+  ];
 
   @override
   State<complete_reg> createState() => _complete_regState();
@@ -144,7 +145,7 @@ class _complete_regState extends State<complete_reg> {
               ),
             ),
 
-  
+
           ],
         ),
       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pamper_me/UI/C/HnM.dart';
+import 'package:pamper_me/complete_reg.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -17,13 +19,17 @@ class _LoginScreenState extends State<LoginScreen> {
 
       backgroundColor:Colors.indigo[50],
 
-    body:Container(
+    body:ListView(
+      scrollDirection: Axis.vertical,
+      children: [
+        Container(
       decoration:BoxDecoration(
         image:DecorationImage(
         image:AssetImage("assets/makeup.jpg"),
         fit: BoxFit.cover,
       ),
     ),
+
 
       child: SafeArea(
       child:Center(
@@ -100,11 +106,15 @@ class _LoginScreenState extends State<LoginScreen> {
             borderRadius:BorderRadius.circular(12),
           ),
           child: Center(
-            child: Text('Sign in',
-            style: TextStyle(color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 18,
-            ),
+            child: InkWell(
+              child: Text('Sign in',
+              style: TextStyle(color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              ),
+              ),
+              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Bibob()));
+              },
             ),
         ),
         ),
@@ -120,11 +130,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Text(
-            'Register',
-            style: TextStyle(
-            color:Colors.black
-            ),
+            InkWell(
+              child: Text(
+              'Register',
+              style: TextStyle(
+              color:Colors.black
+              ),
+              ),
+              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> complete_reg()));
+              },
             ),
           ],
         )
@@ -132,7 +146,9 @@ class _LoginScreenState extends State<LoginScreen> {
     ),
     ),
     ),
-    )
+        ),
+    ],
+    ),
      );
   }
 }
