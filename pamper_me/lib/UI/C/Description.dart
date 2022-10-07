@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pamper_me/UI/C/HnM.dart';
+import 'package:pamper_me/UI/C/HomePage.dart';
+import 'package:pamper_me/UI/C/Types.dart';
+import 'package:pamper_me/UI/C/shopMenu.dart';
 
 class Description extends StatefulWidget {
 
@@ -19,7 +21,7 @@ class _DescriptionState extends State<Description> {
     return Scaffold(
       appBar: AppBar(
         leading: InkWell(child: Icon(Icons.arrow_back),
-            onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Bibob()));
+            onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Types()));
       },
         ),
       elevation: 5,

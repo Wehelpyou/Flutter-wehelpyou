@@ -1,12 +1,15 @@
+import 'dart:developer';
+import 'package:pamper_me/UI/C/Types.dart';
+import 'package:pamper_me/UI/C/chosenservice.dart';
 import 'package:flutter/material.dart';
-import 'package:pamper_me/UI/C/HnM.dart';
+import 'package:pamper_me/UI/C/HomePage.dart';
 
 class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple[150],
+      backgroundColor: Colors.greenAccent[200],
 
       bottomNavigationBar: BottomNavigationBar(items: [
         BottomNavigationBarItem(icon: Icon(Icons.perm_identity),
@@ -19,6 +22,7 @@ class Menu extends StatelessWidget {
 
 
       body: CustomScrollView(
+
         slivers: [
           //Silverappbar
         SliverAppBar(
@@ -31,24 +35,47 @@ class Menu extends StatelessWidget {
           floating: true,
           pinned: true,
           flexibleSpace: FlexibleSpaceBar(
-            background: Image.asset('assets/bingo.png'),
-            title: Center(child: Text('Name shop')),
+            background: Image.asset('assets/login.png'),
+            title: Center(child: Text('Barbershops')),
           ),
         ),
           //silver items
           SliverToBoxAdapter(
           child: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Container(
-                height: 400,
-                color: Colors.blue,
-                child: Center(child: Text('Haircuts'),
+            child: InkWell(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Container(
+                  height: 400,
+                  color: Colors.blue,
+                  child: Center(child: Text('Legendary Barbershop'),
+                  ),
                 ),
               ),
+              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Service()));
+              },
             ),
           ),
+          ),
+
+          SliverToBoxAdapter(
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: InkWell(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 320,
+                    color: Colors.blue,
+                    child: Center(child: Text('Chara barbershop')
+                    ),
+                  ),
+                ),
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Service()));
+                },
+              ),
+            ),
           ),
 
           SliverToBoxAdapter(
@@ -57,30 +84,15 @@ class Menu extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
-                  height: 400,
+                  height: 320,
                   color: Colors.blue,
-                  child: Center(child: Text('Manicure')
+                  child: Center(child: Text('Tshepo')
                   ),
                 ),
               ),
             ),
           ),
 
-          SliverToBoxAdapter(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  height: 400,
-                  color: Colors.blue,
-                  child: Center(child: Text('Padicure')
-                  ),
-                ),
-              ),
-            ),
-          ),
-
 
           SliverToBoxAdapter(
             child: Padding(
@@ -88,7 +100,7 @@ class Menu extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
-                  height: 400,
+                  height: 320,
                   color: Colors.blue,
                   child: Center(child: Text('Legendary products')
                   ),
@@ -103,7 +115,7 @@ class Menu extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: Container(
-                  height: 400,
+                  height: 320,
                   color: Colors.blue,
                 ),
               ),

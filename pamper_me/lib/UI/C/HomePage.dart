@@ -3,6 +3,7 @@ import 'package:pamper_me/UI/C/Description.dart';
 import 'package:pamper_me/UI/C/Ls.dart';
 import 'package:pamper_me/UI/C/Square.dart';
 import 'package:pamper_me/UI/C/chosenservice.dart';
+import 'package:pamper_me/UI/C/shopMenu.dart';
 class Bibob extends StatelessWidget {
  final List _posts = [
    'Barbershops',
@@ -111,7 +112,7 @@ class Bibob extends StatelessWidget {
                 );
               }
               ),
-                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Service()));
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Menu()));
     },
             ),
           ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pamper_me/UI/C/HnM.dart';
+import 'package:pamper_me/UI/C/Description.dart';
+import 'package:pamper_me/UI/C/HomePage.dart';
+import 'package:pamper_me/UI/C/Types.dart';
+import 'package:pamper_me/UI/C/shopMenu.dart';
 
 class Service extends StatelessWidget {
 
@@ -22,7 +25,7 @@ class Service extends StatelessWidget {
           //Silverappbar
           SliverAppBar(
       leading: InkWell(child: Icon(Icons.arrow_back),
-      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Bibob()));
+      onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Menu()));
       },
       ),
             // title:Text('Name'),
@@ -39,14 +42,18 @@ class Service extends StatelessWidget {
           SliverToBoxAdapter(
             child: Padding(
               padding: const EdgeInsets.all(20.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  height: 400,
-                  color: Colors.blue,
-                  child: Center(child: Text('Haircuts'),
+              child: InkWell(
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    height: 400,
+                    color: Colors.blue,
+                    child: Center(child: Text('Haircuts'),
+                    ),
                   ),
                 ),
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> Types()));
+                },
               ),
             ),
           ),
